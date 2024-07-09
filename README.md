@@ -74,3 +74,8 @@ MVPリリース
 ■ 機能の実装方針予定
 
 APIの実装は今のところ予定していない
+
+
+■ ER図
+https://www.figma.com/design/PTYwQg0LqkJOBnSgej9mbU/ER%E5%9B%B3?node-id=0-1&t=jumDilSiC4jpjxzJ-1
+
