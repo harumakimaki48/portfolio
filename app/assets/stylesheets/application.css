@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+
+ .text-center {
+    text-align: center; /* テキストを中央に揃える */
+    margin: 60px 0; /* マージンをリセット（必要に応じて） */
+  }
+
+ .card-body {
+    background-color: #f8f9fa; /* 薄いグレーの色コード */
+  }
