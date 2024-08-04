@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_25_080518) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_28_124506) do
+  create_table "shop_tags", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "shop_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_shop_tags_on_shop_id"
+    t.index ["tag_id"], name: "index_shop_tags_on_tag_id"
+  end
+
   create_table "shops", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.time "opening_time"
@@ -21,4 +30,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_25_080518) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tags", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "shop_tags", "shops"
+  add_foreign_key "shop_tags", "tags"
 end
