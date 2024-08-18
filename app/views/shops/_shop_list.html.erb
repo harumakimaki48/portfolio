@@ -6,7 +6,11 @@
           <p class="card-text">
             <strong>営業時間:</strong> <%= shop.opening_time.strftime('%H:%M') %>〜<%= shop.closing_time.strftime('%H:%M') %><br>
             <strong>定休日:</strong> <%= shop.holiday %><br>
-            <strong>タグ:</strong> <%= shop.tags.map(&:name).join(', ') %><br>
+            <strong>タグ:</strong> 
+            <% shop.tags.each do |tag| %>
+              <span class="badge badge-primary"><%= tag.name %></span>
+            <% end %>
+             <br>
             <strong>URL:</strong><%= link_to shop.url, shop.url, target: "_blank", class: "btn btn-link" %>
           </p>
         </div>

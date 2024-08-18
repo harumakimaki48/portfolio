@@ -13,14 +13,25 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
 
-
+/* shop/index画面 */
  .text-center {
     text-align: center; /* テキストを中央に揃える */
     margin: 60px 0; /* マージンをリセット（必要に応じて） */
+    background-color: #f8f9fa;
+    
   }
 
  .card-body {
     background-color: #f8f9fa; /* 薄いグレーの色コード */
+  }
+
+/* admin/index画面 */
+  .button-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .button-group .btn {
+    margin: 0;
   }
