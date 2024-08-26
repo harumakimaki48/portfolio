@@ -15,16 +15,16 @@
  */
 
 /* shop/index画面 */
- .text-center {
-    text-align: center; /* テキストを中央に揃える */
-    margin: 60px 0; /* マージンをリセット（必要に応じて） */
-    background-color: #f8f9fa;
-    
-  }
+.text-center {
+  margin: 60px 0; /* Adjusts top and bottom margin */
+  width: 100%; /* Ensures full width within its container */
+}
 
  .card-body {
     background-color: #f8f9fa; /* 薄いグレーの色コード */
+    
   }
+
 
 /* admin/index画面 */
   .button-group {
@@ -35,3 +35,47 @@
   .button-group .btn {
     margin: 0;
   }
+
+
+/* admin/shops/new画面*/
+  .time-select-box {
+    width: 60px; /* Adjust the width as needed */
+  }
+
+  .container {
+    width: 100%;
+    max-width: 800px; /* You can adjust this if needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+  width: auto; /* カードの幅を100%に設定 */
+  max-width: 600px; /* 最大幅を300pxに設定（必要に応じて調整） */
+  margin: 0 auto; /* カードを中央揃えにするために自動マージン */
+  height: 180px;
+}
+
+.top-button-container {
+  position: absolute; /* 絶対配置 */
+  top: 20px; /* 上からの距離 */
+  right: 20px; /* 右からの距離 */
+}
+
+.time-select-container {
+  display: flex;
+  gap: 20px; /* 開店時間と閉店時間の間に余白を追加 */
+  margin-bottom: 10px; /* フォーム間の余白 */
+}
+
+.time-select-box {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+}
+
+.time-select-box select {
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+}

@@ -22,7 +22,8 @@ class Admin::ShopsController < ApplicationController
     end
 
     def update
-      if @shop.update(shop_params)
+      holidays = params[:shop][:holidays].join(",") if params[:shop][:holidays] # 選択された定休日をカンマ区切りの文字列に変換
+      if @shop.update(shop_params.merge(holiday: holidays))
         redirect_to admin_shops_path, notice: '店舗情報が更新されました'
       else
         render :edit
@@ -44,6 +45,6 @@ class Admin::ShopsController < ApplicationController
     end
 
     def shop_params
-      params.require(:shop).permit(:name, :opening_time, :closing_time, :holiday, :url) # 必要な属性を追加
+      params.require(:shop).permit(:name, :opening_time, :closing_time, :holiday, :url, tag_ids: []) # 必要な属性を追加
     end
   end

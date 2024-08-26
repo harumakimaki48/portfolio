@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     delete 'logout', to: 'sessions#destroy' # ログアウト
     get 'dashboard', to: 'dashboard#index' # 管理者ダッシュボード
     resources :shops
+    resources :tags
   end
   
   root 'welcome#index'

@@ -5,6 +5,12 @@ body {
     color: #333;
 }
 
+.text-center {
+    text-align: center; /* Centers the text horizontally */
+    margin: 60px 0; /* Adjusts top and bottom margin */
+    width: 100%; /* Ensures full width within its container */
+  }
+
 .container {
     width: 100%;
     max-width: 600px;

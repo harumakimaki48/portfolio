@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>店舗情報編集一覧</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_importmap_tags %>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>店舗情報編集一覧</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<%= stylesheet_link_tag 'application' %>
 </head>
 
 <body>
-  <h1 class="text-center">梅ヶ枝餅屋さんリスト</h1>
-  <div id="search-results" class="row">
-    <% @shops.each do |shop| %>
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title"><%= shop.name %></h3>
-            <p class="card-text">
-              <strong>営業時間:</strong> <%= shop.opening_time.strftime('%H:%M') %>〜<%= shop.closing_time.strftime('%H:%M') %><br>
-              <strong>定休日:</strong> <%= shop.holiday %><br>
-              <strong>タグ:</strong> 
-              <% shop.tags.each do |tag| %>
-                <span class="badge badge-primary"><%= tag.name %></span>
-              <% end %>
-              <br>
-              <strong>URL:</strong> <%= link_to shop.url, shop.url, target: "_blank", class: "btn btn-link" %>
-            </p>
-            <div class="button-group">
-              <%= link_to '編集', edit_admin_shop_path(shop), class: 'btn btn-primary' %>
-              <%= link_to '削除', admin_shop_path(shop), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+<h2 class="text-center my-4">店舗情報編集一覧</h2>
+<div class="top-button-container">
+    <%= link_to 'TOP', admin_dashboard_index_path, class: 'btn btn-info float-right' %>
+</div>
+
+<div class="container">
+<div id="search-results" class="row">
+  <%= render partial: 'shop_list', locals: { shops: @shops } %>
+</div>
+</div>
+</div>
 </body>
+
 </html>
