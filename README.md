@@ -1,23 +1,27 @@
-■サービス概要
+# README
 
-太宰府天満宮の参道で販売されている、梅ヶ枝餅を取り扱っている店舗のまとめサイト
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-一覧で店舗を見ることができ、あいまい検索・タグ検索で条件に合うお店を検索することができる
+Things you may want to cover:
 
+* Ruby version
 
-■ このサービスへの思い・作りたい理由
+* System dependencies
 
-生まれも育ちも太宰府市で、毎回行く梅ヶ枝餅屋さんは固定されているのですが、
-市外の方からどこのお店がいいのか聞かれることが多いので、検索できるサイトがあると面白いのではないかと考えた
+* Configuration
 
-参道自体は食べ歩きメインではあるが、古い町屋を活かした店内飲食もできるお店もあるので、こちらも観光客の方に訪れて欲しいと思う
+* Database creation
 
+* Database initialization
 
-■ ユーザー層について
+* How to run the test suite
 
-太宰府天満宮を訪れる観光客の方をターゲットとして考えている
+* Services (job queues, cache servers, search engines, etc.)
 
+* Deployment instructions
 
+* ...
 ■サービスの利用イメージ
 
 参道は町屋の建物が多いため、店内飲食ができるかパッと見すごくわかりにくい

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  opening_time: 2024-07-25 17:05:19
+  closing_time: 2024-07-25 17:05:19
+  holiday: MyString
+  url: MyText
+
+two:
+  name: MyString
+  opening_time: 2024-07-25 17:05:19
+  closing_time: 2024-07-25 17:05:19
+  holiday: MyString
+  url: MyText
