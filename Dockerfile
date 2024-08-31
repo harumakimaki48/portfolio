@@ -19,3 +19,4 @@ COPY yarn.lock /myapp/yarn.lock
 RUN bundle install
 RUN yarn install
 COPY . /myapp
+CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]
